@@ -1,0 +1,29 @@
+# HEART_BIT_TRACKER
+def get_pass_average(beats):
+    beats_Above = []
+    for count in beats:
+        if count >= 100:
+            beats_Above.append(count);
+
+    average = sum(beats_Above) // len(beats_Above)
+    return round(average,2)
+
+
+beats = [72, 77, 79, 95, 102, 105, 112, 115, 120, 121, 121,
+              125, 125, 123, 119, 115, 105, 101, 96, 92, 90, 85]
+print(get_pass_average(beats))
+
+
+def average_heart_rate(rates):
+    total=0
+    count=0
+    for i in rates:
+        if i >=100:
+            total += i
+            count += 1
+    return total // count
+beats = [72, 77, 79, 95, 100, 103, 125, 111, 120, 123, 121,
+              125, 135, 123, 101, 109, 105, 101, 96, 92, 90, 85]
+print(get_pass_average(beats))
+
+
